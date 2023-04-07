@@ -1,0 +1,53 @@
+.card {
+  background-color: #232326;
+  color: white;
+  font-family: sans-serif;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .description {
+    padding: 0.75rem 1rem;
+    max-height: 100px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 8px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #444;
+      }
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &::after {
+      z-index: 1;
+      background: linear-gradient(transparent, #232326);
+    }
+
+    &::before {
+      z-index: 2;
+      background: #232326;
+      opacity: 1;
+      transition: all 200ms;
+    }
+  }
+}
