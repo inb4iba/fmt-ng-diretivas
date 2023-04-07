@@ -7,6 +7,7 @@ import { CardProps } from "./components/card/card.component";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
+  showModal = false;
   cards: CardProps[] = [
     {
       url: "https://image.api.playstation.com/vulcan/ap/rnd/202206/0301/KSalsBYWb0IuDrdD1SbptAd6.png",
