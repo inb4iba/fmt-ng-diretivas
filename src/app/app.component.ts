@@ -8,6 +8,7 @@ import { CardProps } from "./components/card/card.component";
 })
 export class AppComponent {
   showModal = false;
+  page = "Home";
   cards: CardProps[] = [
     {
       url: "https://image.api.playstation.com/vulcan/ap/rnd/202206/0301/KSalsBYWb0IuDrdD1SbptAd6.png",

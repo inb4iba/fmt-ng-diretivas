@@ -1,6 +1,19 @@
 <hamburger />
+<nav>
+  <ul>
+    <li [ngClass]="{selected: page === 'Home'}" (click)="page = 'Home'">Home</li>
+    <li [ngClass]="{selected: page === 'Preços'}" (click)="page = 'Preços'">Preços</li>
+    <li [ngClass]="{selected: page === 'Informação'}" (click)="page = 'Informação'">Informação</li>
+  </ul>
+</nav>
 
-<div class="container">
+<div class="container heading" [ngSwitch]="page">
+  <h2 *ngSwitchCase="'Home'">Estou na página de Home</h2>
+  <h2 *ngSwitchCase="'Preços'">Estou na página de Preços</h2>
+  <h2 *ngSwitchCase="'Informação'">Estou na página de Informações</h2>
+</div>
+
+<div class="container grid">
   <card *ngFor="let card of cards" [props]="card" />
 </div>
 
