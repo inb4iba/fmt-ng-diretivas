@@ -1,0 +1,36 @@
+<form>
+  <div class="input">
+    <label for="username">Usuário</label>
+    <input
+      [(ngModel)]="user.username"
+      type="text"
+      name="username"
+      id="username"
+    />
+  </div>
+  <div class="input">
+    <label for="cpf">CPF</label>
+    <input [(ngModel)]="user.cpf" type="number" name="cpf" id="cpf" />
+  </div>
+  <div class="input">
+    <label for="birthday">Dia de Nascimento</label>
+    <input
+      [(ngModel)]="user.birthday"
+      type="number"
+      name="birthday"
+      id="birthday"
+      min="1"
+      max="31"
+    />
+  </div>
+  <div class="input">
+    <label for="password">Senha</label>
+    <input
+      [(ngModel)]="user.password"
+      type="password"
+      name="password"
+      id="password"
+    />
+  </div>
+  <button class="register" (click)="register()">Cadastrar</button>
+</form>
